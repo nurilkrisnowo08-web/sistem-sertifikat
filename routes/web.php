@@ -19,4 +19,10 @@ Route::prefix('admin')->group(function () {
 
 Route::get('/', function () {
     return redirect()->route('admin.certificates.index');
+    // Jalur pintas membersihkan cache konfigurasi di hosting
+Route::get('/clear-config', function() {
+    \Artisan::call('config:clear');
+    \Artisan::call('config:cache');
+    return "Konfigurasi Berhasil Diperbarui!";
+});
 });
