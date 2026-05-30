@@ -89,11 +89,20 @@
 <body>
 
     @auth
-    <div class="action-bar no-print container px-0">
-        <a href="{{ route('admin.certificates.index') }}" class="btn btn-light border"><i class="fa-solid fa-arrow-left me-2"></i>Kembali</a>
-        <button onclick="window.print()" class="btn btn-warning fw-bold" style="background-color: #c5a059; color: #1a2b4c; border: none;">
-            <i class="fa-solid fa-print me-2"></i>Cetak / Simpan PDF
-        </button>
+    <div class="action-bar no-print container px-0" style="justify-content: space-between; align-items: center;">
+        <form action="{{ route('logout') }}" method="POST" class="m-0">
+            @csrf
+            <button type="submit" class="btn btn-danger fw-bold">
+                <i class="fa-solid fa-right-from-bracket me-2"></i>Keluar Sistem
+            </button>
+        </form>
+
+        <div class="d-flex gap-3">
+            <a href="{{ route('admin.certificates.index') }}" class="btn btn-light border"><i class="fa-solid fa-arrow-left me-2"></i>Kembali</a>
+            <button onclick="window.print()" class="btn btn-warning fw-bold" style="background-color: #c5a059; color: #1a2b4c; border: none;">
+                <i class="fa-solid fa-print me-2"></i>Cetak / Simpan PDF
+            </button>
+        </div>
     </div>
     @endauth
 
