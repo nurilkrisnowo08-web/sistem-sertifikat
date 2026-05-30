@@ -18,12 +18,12 @@
             align-items: center;
         }
         
-        /* MENGGUNAKAN GAMBAR MURAI.PNG DARI FOLDER PUBLIC KAMU */
+        /* JALUR BACKGROUND AUTOMATIS BERADAPTASI JIKA DI HOSTING PRODUCTION */
         body::before {
             content: "";
             position: fixed;
             top: 0; left: 0; width: 100%; height: 100%;
-            background-image: url("{{ asset('murai.png') }}");
+            background-image: url("{{ asset(app()->environment('production') ? 'public/murai.png' : 'murai.png') }}");
             background-repeat: no-repeat;
             background-position: center;
             background-size: cover; 
