@@ -24,5 +24,18 @@ Route::get('/clear-config', function() {
     \Artisan::call('config:clear');
     \Artisan::call('config:cache');
     return "Konfigurasi Berhasil Diperbarui!";
+    Route::get('/clear-config', function() {
+    \Artisan::call('config:clear');
+    
+    // Membuat jalan pintas storage langsung di dalam public_html Hostinger
+    $target = storage_path('app/public');
+    $shortcut = $_SERVER['DOCUMENT_ROOT'] . '/storage';
+    
+    if (!file_exists($shortcut)) {
+        symlink($target, $shortcut);
+    }
+    
+    return "Konfigurasi bersih dan Storage Link berhasil disinkronisasi!";
+});
 });
 });
