@@ -27,7 +27,7 @@ Route::get('/buat-akun-admin-arqi', function() {
             'password' => bcrypt('arqifarm3321')
         ]
     );
-    return 'Akun admin berhasil dibuat! Email: admin@arqifarm.com | Password: Nuril1323026';
+    return 'Akun admin berhasil dibuat! Email: admin@arqifarm.com | Password:arqifarm3321';
 });
 
 // Jalur umum pembacaan scan barcode (akses publik tanpa tombol admin)
