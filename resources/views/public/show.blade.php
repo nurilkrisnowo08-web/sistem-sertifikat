@@ -39,9 +39,9 @@
             display: flex; 
             align-items: center; 
             justify-content: space-between; 
-            margin-bottom: 30px; 
-            border-bottom: 2px solid #c5a059; 
-            padding-bottom: 20px;
+            margin-bottom: 20px; 
+            border-bottom: 1px solid #c5a059; 
+            padding-bottom: 10px;
         }
 
         .header-left { width: 150px; text-align: left; }
