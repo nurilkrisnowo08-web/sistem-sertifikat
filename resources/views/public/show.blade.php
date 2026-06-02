@@ -109,7 +109,7 @@
                 
                 <div class="cert-header">
                     <div class="header-left">
-                        <img src="{{ asset(app()->environment('production') ? 'public/logo1.png' : 'logo1.png') }}" class="cert-seal-img" alt="Logo">
+                        <img src="{{ asset(app()->environment('production') ? 'public/logo2.png' : 'logo2.png') }}" class="cert-seal-img" alt="Logo">
                     </div>
                     <div class="header-center">
                         <h1 class="cert-title">CERTIFICATE</h1>
