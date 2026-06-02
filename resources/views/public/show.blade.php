@@ -34,7 +34,7 @@
             background-color: #fdfbf7;
         }
 
-        /* HEADER & LOGO BARU (GRID LAYOUT DENGAN LEBAR BARU) */
+        /* HEADER & LOGO GRID (LEBAR DISESUAIKAN DENGAN LOGO BARU) */
         .cert-header { 
             display: flex; 
             align-items: center; 
@@ -44,20 +44,16 @@
             padding-bottom: 10px;
         }
 
-        .header-left { width: 180px; text-align: left; }
+        .header-left { width: 220px; text-align: left; }
         .header-center { flex-grow: 1; text-align: center; }
-        .header-right { width: 180px; text-align: right; }
+        .header-right { width: 220px; text-align: right; }
 
-        /* UKURAN LOGO DI-UPGRADE BIAR LEBIH BESAR DAN JELAS */
+        /* LINGKARAN, BACKGROUND, BORDER, DAN PADDING DIHAPUS, UKURAN DIGEDEIN */
         .cert-seal-img {
-            width: 160px;
-            height: 160px;
+            width: 200px;
+            height: 200px;
             object-fit: contain;
             filter: drop-shadow(0 4px 6px rgba(0,0,0,0.2));
-            background: #fff;
-            border-radius: 50%;
-            padding: 8px;
-            border: 2px solid #c5a059;
         }
 
         .cert-title { font-family: 'Playfair Display', serif; color: #1a2b4c; font-size: 2.8rem; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 5px; }
